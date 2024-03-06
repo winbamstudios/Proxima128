@@ -45,7 +45,6 @@ namespace Mirage.DE
                 Location = new System.Drawing.Point(290,0),
                 HorizontalPadding = 16,
                 Style = new UIMenuBarButtonStyle(),
-                Checkable = true,
                 HorizontalAlignment = TextAlignment.Center,
             };
             _textView.Content.Style = new TextKit.TextStyle(Resources.Cantarell, GraphicsKit.Color.Black);

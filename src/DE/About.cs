@@ -59,12 +59,12 @@ namespace Mirage.DE
             {
                 Style = _valueStyle
             };
-            block.Append("The (Forked) Cosmos Desktop Environment\n\n");
+            block.Append("The (Forked) Cosmos Desktop Environment based on Mirage\n\n");
 
             List<(string Name, string Value)> rows = new()
             {
                 ("OS", DesktopEnvironment.DistributionName + " " + DesktopEnvironment.DistributionVersion),
-                ("Proximirage Version", "1.1.1c"),
+                ("Proximirage Version", "1.1.1d"),
                 ("Memory", ((int)(Math.Ceiling(Cosmos.Core.CPU.GetAmountOfRAM() / 8.0) * 8.0)).ToString() + " MB"),
                 ("CPU", Cosmos.Core.CPU.GetCPUBrandString()),
             };
