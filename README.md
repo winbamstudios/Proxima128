@@ -1,4 +1,5 @@
-# Mirage
+# Proxima128 - 32-bit OS
+Proxima128 is a modern operating system designed upon MirageOS with a modern kernel.
 Mirage is a desktop environment for [Cosmos](https://github.com/CosmosOS/Cosmos).
 
 ## System Requirements
