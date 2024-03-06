@@ -30,7 +30,7 @@ namespace Mirage.DE
             _window.Surface.AlwaysOnTop = true;
             _window.Surface.BorderColor = Color.Transparent;
             _window.Surface.IsShell = true;
-            UIButton button = new UIButton("Mirage")
+            UIButton button = new UIButton("Proxima128")
             {
                 Location = new(8, 0),
                 ExplicitHeight = MENU_HEIGHT,
@@ -46,6 +46,7 @@ namespace Mirage.DE
                     new("Edit", () => _ = new Edit(surfaceManager)),
                     new("Digital Clock", () => _ = new DigitalClock(surfaceManager)),
                     new("DVD Screensaver", () => _ = new DVDScreensaver(surfaceManager)),
+                    new("ProximaWeb", () => _ = new PWeb(surfaceManager)),
                 },
                 new()
                 {

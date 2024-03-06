@@ -21,7 +21,7 @@ namespace Mirage.DE
         /// </summary>
         public About(SurfaceManager surfaceManager) : base(surfaceManager)
         {
-            MainWindow = new UIWindow(surfaceManager, 400, 240, "About This Computer", resizable: false);
+            MainWindow = new UIWindow(surfaceManager, 400, 280, "About This Computer", resizable: false);
 
             UICanvasView icon = new UICanvasView(Resources.Computer, alpha: true)
             {
@@ -55,16 +55,16 @@ namespace Mirage.DE
         /// <returns>A rich text block with system information.</returns>
         private TextBlock GetAboutTextBlock()
         {
-            TextBlock block = new TextBlock(_logoStyle, "Mirage\n")
+            TextBlock block = new TextBlock(_logoStyle, "Proximirage\n")
             {
                 Style = _valueStyle
             };
-            block.Append("The Cosmos Desktop Environment\n\n");
+            block.Append("The (Forked) Cosmos Desktop Environment\n\n");
 
             List<(string Name, string Value)> rows = new()
             {
                 ("OS", DesktopEnvironment.DistributionName + " " + DesktopEnvironment.DistributionVersion),
-                ("Mirage Version", "1.0 Beta"),
+                ("Proximirage Version", "1.1.1c"),
                 ("Memory", ((int)(Math.Ceiling(Cosmos.Core.CPU.GetAmountOfRAM() / 8.0) * 8.0)).ToString() + " MB"),
                 ("CPU", Cosmos.Core.CPU.GetCPUBrandString()),
             };
