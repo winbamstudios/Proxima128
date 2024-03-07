@@ -10,6 +10,7 @@ namespace Mirage.DE
 {
     /// <summary>
     /// Test HTML reciever application
+    /// Will be replaced w/ DOMforge in the future
     /// </summary>
     class PWeb : UIApplication
     {

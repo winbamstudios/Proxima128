@@ -64,7 +64,7 @@ namespace Mirage.DE
             List<(string Name, string Value)> rows = new()
             {
                 ("OS", DesktopEnvironment.DistributionName + " " + DesktopEnvironment.DistributionVersion),
-                ("Proximirage Version", "1.2.0a"),
+                ("Proximirage Version", "1.2.1"),
                 ("Memory", ((int)(Math.Ceiling(Cosmos.Core.CPU.GetAmountOfRAM() / 8.0) * 8.0)).ToString() + " MB"),
                 ("CPU", Cosmos.Core.CPU.GetCPUBrandString()),
             };
