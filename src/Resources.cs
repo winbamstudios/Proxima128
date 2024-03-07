@@ -16,7 +16,7 @@ namespace Mirage
     public static class Resources
     {
 
-        [ManifestResourceStream(ResourceName = "Proxima128.Resources.Cantarell.acf")] private static readonly byte[] _cantarell;
+        [ManifestResourceStream(ResourceName = "Proxima128.Resources.Cantarell.acf")] private static readonly byte[] _cantarell; // GNOME 3.x/4x default font 
         public static readonly AcfFontFace Cantarell = new AcfFontFace(new MemoryStream(_cantarell));
         [ManifestResourceStream(ResourceName = "Proxima128.Resources.CantarellBold.acf")] private static readonly byte[] _cantarellBold;
         public static readonly AcfFontFace CantarellBold = new AcfFontFace(new MemoryStream(_cantarellBold));
@@ -106,6 +106,8 @@ namespace Mirage
         public static readonly Canvas Keyboard = Image.FromBitmap(_keyboard);
         [ManifestResourceStream(ResourceName = "Proxima128.Resources.Wallpaper1024.bmp")] private static readonly byte[] _wall1024;
         public static readonly Canvas Wallpaper1024 = Image.FromBitmap(_wall1024);
+        [ManifestResourceStream(ResourceName = "Proxima128.Resources.Cantarell.ttf")]
+        public static byte[] CantarellTTF;
     }
 }
 
