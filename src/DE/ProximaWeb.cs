@@ -7,6 +7,8 @@ using Mirage.SurfaceKit;
 using Mirage.TextKit;
 using Mirage.UIKit;
 using Proxima128.P128;
+using CosmosHttp.Client;
+using System.IO;
 
 namespace Mirage.DE
 {
@@ -21,7 +23,7 @@ namespace Mirage.DE
         /// </summary>
         public PWeb(SurfaceManager surfaceManager) : base(surfaceManager)
         {
-            MainWindow = new UIWindow(surfaceManager, 800, 600, "ProximaWeb", resizable: false)
+            MainWindow = new UIWindow(surfaceManager, 800, 600, "DOMforge", resizable: false)
             {
                 BackgroundColor = GraphicsKit.Color.White
             };
@@ -37,9 +39,9 @@ namespace Mirage.DE
             {
                 Location = new System.Drawing.Point(0, 25),
             };
-
+            
             htmlrender3 renderer = new htmlrender3(Resources.CantarellTTF);
-            renderer.ParseHtml("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>My First HTML Page</title>\r\n</head>\r\n<body>\r\n    <h1>My First Heading</h1>\r\n    <p>This is my first paragraph.</p>\r\n</body>\r\n</html>");
+            renderer.ParseHtml("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Home</title>\r\n</head>\r\n<body>\r\n    <h1>Welcome to DOMforge</h1>\r\n    <p>Enter a URL and connect to the 'net!</p>\r\n</body>\r\n</html>");
             renderer.Update((ushort)MainWindow.Size.Width, (ushort)(MainWindow.Size.Height - 25));
 
             _browserView.Canvas.DrawImage(0, 0, BitmapConverter.CGSTOMIRRAGE(renderer.Render()));
@@ -54,6 +56,8 @@ namespace Mirage.DE
                 HorizontalAlignment = TextAlignment.Center,
             };
 
+            _goButton.OnMouseClick.Bind((args) => LoadUrl(_textView.Content.Text));
+
             _textView.Content.Style = new TextKit.TextStyle(Resources.Cantarell, GraphicsKit.Color.Black);
             _textView.Content.Append("http://example.com");
             _textView.SelectionStart = _textView.SelectionEnd = _textView.Content.Length;
@@ -62,12 +66,26 @@ namespace Mirage.DE
             MainWindow.RootView.Add(_goButton);
         }
 
+        private void LoadUrl(string url)
+        {
+            _request = new HttpRequest();
+            _request.IP = "34.223.124.45";
+            _request.Domain = url; //very useful for subdomains on same IP
+            _request.Path = "/";
+            _request.Method = "GET";
+            _request.Send();
+            htmlrender3 renderer = new htmlrender3(Resources.CantarellTTF);
+            renderer.ParseHtml(_request.Response.Content);
+            renderer.Update((ushort)MainWindow.Size.Width, (ushort)(MainWindow.Size.Height - 25));
+
+        }
+
         /// <summary>
         /// The URL bar.
         /// </summary>
         private readonly UITextView _textView;
         private readonly UICanvasView _browserView;
         private readonly UIButton _goButton;
-
+        private HttpRequest _request;
     }
 }
