@@ -1,6 +1,7 @@
 using Mirage;
 using System;
 using System.Security.Cryptography.X509Certificates;
+using Sys = Cosmos.System;
 /*
  *  This file is part of the Mirage Desktop Environment and Proxima128.
  *  github.com/mirage-desktop/Mirage
@@ -15,6 +16,9 @@ namespace Proxima128
         public static int userWidth;
         protected override void BeforeRun()
         {
+            Sys.FileSystem.CosmosVFS fs = new Sys.FileSystem.CosmosVFS();
+            Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);
+            Console.WriteLine("FS installed at drive 0:\\");
             Console.Write("Please enter screen width: ");
             try
             {

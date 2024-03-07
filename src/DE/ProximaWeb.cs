@@ -41,7 +41,7 @@ namespace Mirage.DE
             };
             
             htmlrender3 renderer = new htmlrender3(Resources.CantarellTTF);
-            renderer.ParseHtml("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Home</title>\r\n</head>\r\n<body>\r\n    <h1>Welcome to DOMforge</h1>\r\n    <p>Enter a URL and connect to the 'net!</p>\r\n</body>\r\n</html>");
+            renderer.ParseHtml("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Home</title>\r\n</head>\r\n<body>\r\n    <h1>Welcome to DOMforge</h1>\r\n    <p>Enter a URL and connect to the 'net! (WIP)</p>\r\n</body>\r\n</html>");
             renderer.Update((ushort)MainWindow.Size.Width, (ushort)(MainWindow.Size.Height - 25));
 
             _browserView.Canvas.DrawImage(0, 0, BitmapConverter.CGSTOMIRRAGE(renderer.Render()));

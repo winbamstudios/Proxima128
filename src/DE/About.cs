@@ -8,6 +8,7 @@ using Mirage.GraphicsKit;
 using Mirage.SurfaceKit;
 using Mirage.TextKit;
 using Mirage.UIKit;
+using Proxima128;
 
 namespace Mirage.DE
 {
@@ -65,6 +66,7 @@ namespace Mirage.DE
             {
                 ("OS", DesktopEnvironment.DistributionName + " " + DesktopEnvironment.DistributionVersion),
                 ("Proximirage Version", "1.2.2"),
+                ("Resolution", Kernel.userWidth + "x" + Kernel.userHeight + "x32 bpp"),
                 ("Memory", ((int)(Math.Ceiling(Cosmos.Core.CPU.GetAmountOfRAM() / 8.0) * 8.0)).ToString() + " MB"),
                 ("CPU", Cosmos.Core.CPU.GetCPUBrandString()),
             };
