@@ -21,7 +21,7 @@ namespace Mirage.SurfaceKit
         /// </summary>
         public SurfaceManager()
         {
-            _display = Display.GetDisplay(640, 480);
+            _display = Display.GetDisplay((ushort)Proxima128.Kernel.userWidth, (ushort)Proxima128.Kernel.userHeight);
             DisplaySplash();
             MouseManager.ScreenWidth = _display.Width;
             MouseManager.ScreenHeight = _display.Height;
