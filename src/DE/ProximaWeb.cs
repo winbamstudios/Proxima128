@@ -39,7 +39,7 @@ namespace Mirage.DE
             };
 
             htmlrender3 renderer = new htmlrender3(Resources.CantarellTTF);
-            renderer.ParseHtml("<html><body>This is <b>HTML</b> running on <i>Proxima128!</i></body></html>");
+            renderer.ParseHtml("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>My First HTML Page</title>\r\n</head>\r\n<body>\r\n    <h1>My First Heading</h1>\r\n    <p>This is my first paragraph.</p>\r\n</body>\r\n</html>");
             renderer.Update((ushort)MainWindow.Size.Width, (ushort)(MainWindow.Size.Height - 25));
 
             _browserView.Canvas.DrawImage(0, 0, BitmapConverter.CGSTOMIRRAGE(renderer.Render()));
