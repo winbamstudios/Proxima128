@@ -58,6 +58,7 @@ namespace Mirage.DE
                     new("Sleep", () => surfaceManager.Sleep()),
                     new("Power Off...", () => PowerDialogue.ShowPowerDialogue(surfaceManager, isRebooting: false)),
                     new("Restart...", () => PowerDialogue.ShowPowerDialogue(surfaceManager, isRebooting: true)),
+                    new("Error...", () => new Proxima128.Utilities.ErrorPopup(surfaceManager, "This is a test of the Error API")),
                 },
             });
             button.OnCheckedChange.Bind((args) => {
