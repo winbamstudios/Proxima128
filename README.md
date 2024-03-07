@@ -17,4 +17,5 @@ Licensed under the GNU Affero General Public License v3.0.
 
 ## Credits
 `DataKit` and `GraphicsKit` use code forked from [Prism OS](https://github.com/Project-Prism/Prism-OS), which was originally written by Terminal.cs.
+
 `Mirage` code forked from [MirageOS](https://github.com/mirage-desktop/Mirage).
