@@ -12,7 +12,7 @@ namespace Proxima128
         protected override void BeforeRun()
         {
             System.Console.WriteLine("Starting Proxima128...");
-            Mirage.DE.DesktopEnvironment.Start("Proxima128", "0.41");
+            Mirage.DE.DesktopEnvironment.Start("Proxima128", "0.50");
         }
 
         protected override void Run()

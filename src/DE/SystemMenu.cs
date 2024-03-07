@@ -47,6 +47,7 @@ namespace Mirage.DE
                     new("Digital Clock", () => _ = new DigitalClock(surfaceManager)),
                     new("DVD Screensaver", () => _ = new DVDScreensaver(surfaceManager)),
                     new("ProximaWeb", () => _ = new PWeb(surfaceManager)),
+                    new("ErrorAPI", () => new Proxima128.Utilities.ErrorPopup(surfaceManager, "This is a test of the Error API")),
                 },
                 new()
                 {
@@ -58,7 +59,6 @@ namespace Mirage.DE
                     new("Sleep", () => surfaceManager.Sleep()),
                     new("Power Off...", () => PowerDialogue.ShowPowerDialogue(surfaceManager, isRebooting: false)),
                     new("Restart...", () => PowerDialogue.ShowPowerDialogue(surfaceManager, isRebooting: true)),
-                    new("Error...", () => new Proxima128.Utilities.ErrorPopup(surfaceManager, "This is a test of the Error API")),
                 },
             });
             button.OnCheckedChange.Bind((args) => {
