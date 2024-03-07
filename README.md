@@ -7,7 +7,7 @@ Mirage is a desktop environment for [Cosmos](https://github.com/CosmosOS/Cosmos)
 ## System Requirements
 * BIOS
 * VM: VMware
-* CPU: i386
+* CPU: Pentium 4 HT Prescott-2M (untested)
 * RAM: 80 MB
 * Video: VMware SVGA-II
 * Peripherals: PS/2
