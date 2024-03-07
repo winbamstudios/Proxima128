@@ -24,6 +24,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="Resources\Cantarell.ttf" />
       <None Remove="Resources\Wallpaper1024.bmp" />
     </ItemGroup>
 
@@ -80,6 +81,7 @@
         <EmbeddedResource Include="Resources/RadioButton.bmp" />
         <EmbeddedResource Include="Resources/RadioButton_Checked.bmp" />
         <EmbeddedResource Include="Resources/Keyboard.bmp" />
+        <EmbeddedResource Include="Resources\Cantarell.ttf" />
         <EmbeddedResource Include="Resources\Wallpaper1024.bmp" />
     </ItemGroup>
 
