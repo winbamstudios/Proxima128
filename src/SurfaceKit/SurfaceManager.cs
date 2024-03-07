@@ -36,7 +36,7 @@ namespace Mirage.SurfaceKit
         private void DisplaySplash()
         {
             _display.Clear(Color.Black);
-            string message = "Starting Mirage...";
+            string message = "Starting Proximirage...";
             int x = (_display.Width - GraphicsKit.Fonts.Font.Fallback.MeasureString(message)) / 2;
             int y = (_display.Height - GraphicsKit.Fonts.Font.Fallback.Size) / 2;
             _display.DrawString(x, y, message, GraphicsKit.Fonts.Font.Fallback, Color.White);

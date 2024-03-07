@@ -25,7 +25,7 @@ namespace Mirage.DE
             Surface.BorderColor = GraphicsKit.Color.Transparent;
             Surface.IsShell = true;
             UICanvasView wallpaper = new UICanvasView(new Size(surfaceManager.Width, surfaceManager.Height));
-            wallpaper.Canvas.DrawImage(0, 0, Resources.Wallpaper);
+            wallpaper.Canvas.DrawImage(0, 0, Resources.Wallpaper1024);
             RootView.Add(wallpaper);
         }
     }

@@ -104,6 +104,8 @@ namespace Mirage
         public static readonly Canvas RadioButtonChecked = Image.FromBitmap(_radioButtonChecked);
         [ManifestResourceStream(ResourceName = "Proxima128.Resources.Keyboard.bmp")] private static readonly byte[] _keyboard;
         public static readonly Canvas Keyboard = Image.FromBitmap(_keyboard);
+        [ManifestResourceStream(ResourceName = "Proxima128.Resources.Wallpaper1024.bmp")] private static readonly byte[] _wall1024;
+        public static readonly Canvas Wallpaper1024 = Image.FromBitmap(_wall1024);
     }
 }
 

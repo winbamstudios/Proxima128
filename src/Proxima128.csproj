@@ -24,6 +24,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="Resources\Wallpaper1024.bmp" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Cosmos.Build" Version="0-*" NoWarn="NU1604" />
         <PackageReference Include="Cosmos.Debug.Kernel" Version="0-*" NoWarn="NU1604" />
         <PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
@@ -76,6 +80,7 @@
         <EmbeddedResource Include="Resources/RadioButton.bmp" />
         <EmbeddedResource Include="Resources/RadioButton_Checked.bmp" />
         <EmbeddedResource Include="Resources/Keyboard.bmp" />
+        <EmbeddedResource Include="Resources\Wallpaper1024.bmp" />
     </ItemGroup>
 
 </Project>
