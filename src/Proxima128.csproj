@@ -83,4 +83,10 @@
         <EmbeddedResource Include="Resources\Wallpaper1024.bmp" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="DomForge_">
+        <HintPath>DomForge.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

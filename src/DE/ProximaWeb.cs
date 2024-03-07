@@ -38,8 +38,8 @@ namespace Mirage.DE
                 Location = new System.Drawing.Point(0, 25),
             };
 
-            htmlrender3 renderer = new htmlrender3(new byte[] { } /*replace this with a font*/);
-            renderer.ParseHtml("replce this with youre html code");
+            htmlrender3 renderer = new htmlrender3(Resources.CantarellTTF);
+            renderer.ParseHtml("<html><body>This is <b>HTML</b> running on <i>Proxima128!</i></body></html>");
             renderer.Update((ushort)MainWindow.Size.Width, (ushort)(MainWindow.Size.Height - 25));
 
             _browserView.Canvas.DrawImage(0, 0, BitmapConverter.CGSTOMIRRAGE(renderer.Render()));

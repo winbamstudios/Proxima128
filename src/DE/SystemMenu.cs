@@ -46,7 +46,7 @@ namespace Mirage.DE
                     new("Edit", () => _ = new Edit(surfaceManager)),
                     new("Digital Clock", () => _ = new DigitalClock(surfaceManager)),
                     new("DVD Screensaver", () => _ = new DVDScreensaver(surfaceManager)),
-                    new("ProximaWeb", () => _ = new PWeb(surfaceManager)),
+                    new("DOMforge", () => _ = new PWeb(surfaceManager)),
                     new("ErrorAPI", () => new Proxima128.Utilities.ErrorPopup(surfaceManager, "This is a test of the Error API")),
                 },
                 new()
